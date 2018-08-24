@@ -7,12 +7,12 @@
 ## Binary, Decimal, and Hex
 
 * Convert 11111111 binary to
-  - [ ] hex:
-  - [ ] decimal:
+  - [x] hex: ff
+  - [x] decimal: 255
 
 * Convert 11010101 binary to
-  - [ ] hex:
-  - [ ] decimal:
+  - [x] hex: d5
+  - [x] decimal:
 
 * Convert 10000011 binary to
   - [ ] hex:
@@ -60,11 +60,41 @@
 
 
 * [ ] what is concurrency?
+
 * [ ] what is the difference between assembly language and machine code?
+
+ assembly code is humn readable code while machine code is machine readable code like ADD vs 10101010
+
 * [ ] can you explain a graphics card ?
 
-* [ ] Can you AND  &
-* [ ] Can you OR  |
-* [ ] Can you XOR Exclusive OR ^
-* [ ] Can you NAND ~(&)
-* [ ] Can you NOR ~(|)
+## bitwise
+* [x] Can you AND  &
+1 & 1 = 1
+1 & 0 = 0
+0 & 0 = 0
+
+* [x] Can you OR  |
+1 | 1 = 1
+1 | 0 = 1
+0 | 0 = 0
+
+* [x] Can you XOR Exclusive OR ^
+1 ^ 1 = 0
+1 ^ 0 = 1
+0 ^ 0 = 0
+
+* [x] Can you NAND ~(&)
+~(1 & 1) = 0
+~(1 & 0) = 1
+~(0 & 0) = 1
+
+
+* [x] Can you NOR ~(|)
+~(1 | 1) =  0
+~(1 | 0) = 0
+~(0 | 0) = 1
+
+* [x] Can you Exclusive XOR ~(^)
+~(1 ^ 1) = 1
+~(1 ^ 0) = 0
+~(0 ^ 0) = 0

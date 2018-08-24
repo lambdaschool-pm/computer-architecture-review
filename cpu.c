@@ -138,6 +138,10 @@ void cpu_run(CPU *cpu)
       }
       break;
 
+    case DEC:
+      cpu->reg[operandA] -= 1;
+      break;
+
     case DIV:
       // TODO
       alu(cpu, ALU_DIV, operandA, operandB);
