@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "cpu.h"
 
 /**
@@ -11,12 +12,16 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
+
+  // init a CPU struct
   CPU cpu;
+
+  char *filename = argv[1];
 
   cpu_init(&cpu);
 
   // give it a point to the file
-  cpu_load(&cpu, argv[1]);
+  cpu_load(&cpu, filename);
 
   cpu_run(&cpu);
 
