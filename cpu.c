@@ -127,7 +127,18 @@ void cpu_run(CPU *cpu)
       cpu->pc = cpu->reg[operandA];
       break;
 
-        case DIV:
+    case CMP:
+      if (cpu->reg[operandA] == cpu->reg[operandB])
+      {
+        cpu->fl = 1;
+      }
+      else
+      {
+        cpu->fl = 0;
+      }
+      break;
+
+    case DIV:
       // TODO
       alu(cpu, ALU_DIV, operandA, operandB);
       break;
@@ -145,6 +156,21 @@ void cpu_run(CPU *cpu)
       {
         cpu->pc += 2;
       }
+      break;
+    case JMP:
+      cpu->pc = cpu->reg[operandA];
+      break;
+
+    case JNE:
+      if (!cpu->fl)
+      {
+        cpu->pc = cpu->reg[operandA];
+      }
+      else
+      {
+        cpu->pc += 2;
+      }
+
       break;
 
     case LDI:
